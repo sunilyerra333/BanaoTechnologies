@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d1c2ea8b80.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="top-navbar mt-2">
+                    <img src="https://s3.ap-south-1.amazonaws.com/atg-storage-s3/assets/Frontend/img/image-not-found3.jpg" class="atg-logo" />
+                    <input type="search" placeholder="Search for your favourite groups in ATG" class="top-search-input" />
+                    <div class="d-flex mt-2">
+                        <p class="top-para">Create account. <span class="top-span-style">It's free!</span></p>
+                        <i class="fa fa-caret-down triangle-icon-style" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="d-flex flex-row justify-content-end">
+                    <i class="fa fa-square icon-style top-icons" aria-hidden="true"></i>
+                    <i class="fa fa-circle icon-style top-icons"></i>
+                    <i class="fa fa-caret-down icon-style-triangle" aria-hidden="true"></i>
+                </div>
+                <div class="img-container">
+                    <div class="img-arrow-btn-container">
+                        <i class="fa fa-arrow-left arrow-icon" aria-hidden="true"></i>
+                        <button class="join-btn">Join Group</button>
+                    </div>
+                    <div class="names">
+                        <h1 class="img-container-head">Computer Engineering</h1>
+                        <p class="img-container-para">142,765 Computer Engineers follow this</p>
+                    </div>
+                </div>
+                <div class="options-sizing-container">
+                    <div class="d-flex options-style">
+                        <p><span class="option-span">All Posts(32)</span></p>
+                        <p class="selected-options">Article</p>
+                        <p class="selected-options">Event</p>
+                        <p class="selected-options">Education</p>
+                        <p class="selected-options">Job</p>
+                    </div>
+                    <div class="d-flex">
+                        <div class="write-post">
+                            <h1 class="selected-head">Write a Post</h1>
+                            <i class="fa fa-caret-down icon-style-triangle1" aria-hidden="true"></i>
+                        </div>
+                        <div class="d-flex join-group-container">
+                            <i class="fa fa-users group-icon" aria-hidden="true"></i>
+                            <p class="join-group-para">Join Group</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="forest-container">
+                        <div class="forest-top-items-style">
+                            <h1 class="forest-head">Posts(368)</h1>
+                            <div class="selected-items-style">
+                                <h1 class="selected-head">Filter: All</h1>
+                                <i class="fa fa-caret-down icon-style-triangle1" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div class="search-container">
+                            <input type="text" class="search-input" placeholder="Noida, India" id="noidaInput" />
+                            <i class="fas fa-map-marker-alt location-icon"></i>
+                        </div>
+                        <div class="d-flex mt-3 ml-4">
+                            <i class="fa fa-exclamation-circle ml-3" aria-hidden="true"></i>
+                            <p class="ml-2">Your location will help us server better and extend a personalised experiance.</p>
+                        </div>
+                        <div id="recommendedContainer" class="recommended-container">
+                            <div class="d-flex mt-5 ml-5">
+                                <i class="fa fa-thumbs-up mr-2" aria-hidden="true"></i>
+                                <div>
+                                    <p class="recomended-para-style">RECOMMENDED GROUPS</p>
+                                    <div class="follow-container">
+                                        <div class="d-flex">
+                                            <i class="fa fa-user profile-icon-sizing" aria-hidden="true"></i>
+                                            <p class="profile-icon-para-style">Leisure</p>
+                                        </div>
+                                        <button id="leisureFollow" class="follow-button" onclick="leisureBtn()">Follow</button>
+                                    </div>
+                                    <div class="follow-container mt-4">
+                                        <div class="d-flex mt-2">
+                                            <i class="fa fa-user profile-icon-sizing" aria-hidden="true"></i>
+                                            <p class="profile-icon-para-style">Activism</p>
+                                        </div>
+                                        <button id="activismId" class="follow-button" onclick="activismBtn()">Follow</button>
+                                    </div>
+                                    <div class="follow-container mt-4">
+                                        <div class="d-flex mt-2">
+                                            <i class="fa fa-user profile-icon-sizing" aria-hidden="true"></i>
+                                            <p class="profile-icon-para-style">MBA</p>
+                                        </div>
+                                        <button id="mbaId" class="follow-button" onclick="mbaBtn()">Follow</button>
+                                    </div>
+                                    <div class="follow-container mt-4">
+                                        <div class="d-flex mt-2">
+                                            <i class="fa fa-user profile-icon-sizing" aria-hidden="true"></i>
+                                            <p class="profile-icon-para-style">Philosophy</p>
+                                        </div>
+                                        <button id="philosphyId" class="follow-button" onclick="philosphyBtn()">Follow</button>
+
+                                    </div>
+                                    <p class="see-more-para">See More...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="forest-article-style">
+                    <div class="d-flex flex-row article-icon">
+                        <i class="fa fa-pen pen-icon-style"></i>
+                        <p class="article-size">Article</p>
+                    </div>
+                    <div class="article-question-icons">
+                        <h1 class="forest-container-head">What if famous brands had regular fonts? Meet RegulaBrands!</h1>
+                        <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+
+                    </div>
+                    <p>I've worked in UX for the better part of a decide. F...</p>
+                </div>
+                <div class="forest-profile-container">
+                    <div class="d-flex flex-row">
+                        <i class="fa fa-user profile-icon-style" aria-hidden="true"></i>
+                        <div>
+                            <h1 class="profile-name">Sarthak Kamra</h1>
+                            <p class="profile-views">1.4k views</p>
+                        </div>
+                    </div>
+                    <div class="share-icon-container d-flex flex-row">
+                        <i class="fa fa-share-alt share-icon-style" aria-hidden="true"></i>
+                        <div>
+                            <p class="shate-text-sylye">Share</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="door-sizing-container">
+                    <div class="door-container"></div>
+                    <div>
+                        <div class="d-flex flex-row article-icon">
+                            <i class="fa fa-microscope micro-icon-style"></i>
+                            <p class="article-size">Education</p>
+                        </div>
+                        <div class="article-question-icons">
+                            <h1 class="forest-container-head">Tax Benefits for Investment under National Pension Scheme launched by Government</h1>
+                            <i id="elipisisIcon" class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                            <div>
+                                <ul id="unOrderItems"></ul>
+                            </div>
+                        </div>
+                        <p>I've worked in UX for the better part of a decide. F...</p>
+                    </div>
+                    <div class="forest-profile-container">
+                        <div class="d-flex flex-row">
+                            <i class="fa fa-user profile-icon-style" aria-hidden="true"></i>
+                            <div>
+                                <h1 class="profile-name">Sarah West</h1>
+                                <p class="profile-views">4.8k views</p>
+                            </div>
+                        </div>
+                        <div class="share-icon-container d-flex flex-row">
+                            <i class="fa fa-share-alt share-icon-style" aria-hidden="true"></i>
+                            <div>
+                                <p class="shate-text-sylye">Share</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-sizing-container">
+                    <div class="car-container"></div>
+                    <div>
+                        <div class="d-flex flex-row article-icon">
+                            <i class="fa fa-calendar micro-icon-style" aria-hidden="true"></i>
+                            <p class="article-size">MeetUp</p>
+                        </div>
+                        <div class="article-question-icons">
+                            <h1 class="forest-container-head">Finance & Investment Elite Social Mixer @Lujiazui</h1>
+                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                        </div>
+                        <div class="car-para-icon-sizing">
+                            <div class="d-flex flex-row">
+                                <i class="fa fa-calendar-check-o micro-icon-style" aria-hidden="true"></i>
+                                <div>
+                                    <p>Fri,12 Oct, 2018</p>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <i class="fa fa-map-marker micro-icon-style" aria-hidden="true"></i>
+                                <div>
+                                    <p>Ahmedabad, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="visit-btn">Visit Website</button>
+                    </div>
+                    <div class="forest-profile-container">
+                        <div class="d-flex flex-row">
+                            <i class="fa fa-user profile-icon-style" aria-hidden="true"></i>
+                            <div>
+                                <h1 class="profile-name">Ronal Jones</h1>
+                                <p class="profile-views">800 views</p>
+                            </div>
+                        </div>
+                        <div class="share-icon-container d-flex flex-row">
+                            <i class="fa fa-share-alt share-icon-style" aria-hidden="true"></i>
+                            <div>
+                                <p class="shate-text-sylye">Share</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="software-container">
+                    <div>
+                        <div class="d-flex flex-row article-icon">
+                            <i class="fa fa-briefcase micro-icon-style" aria-hidden="true"></i>
+                            <p class="article-size">Job</p>
+                        </div>
+                        <div class="article-question-icons">
+                            <h1 class="forest-container-head">Software Developer-II</h1>
+                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                        </div>
+                        <div class="car-para-icon-sizing">
+                            <div class="d-flex flex-row">
+                                <i class="fa fa-suitcase micro-icon-style" aria-hidden="true"></i>
+                                <div>
+                                    <p>Innovaccer Analytic...</p>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <i class="fa fa-map-marker micro-icon-style" aria-hidden="true"></i>
+                                <div>
+                                    <p>Noida, India</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="apply-btn">Apply on Timesjobs</button>
+                    </div>
+                    <div class="forest-profile-container">
+                        <div class="d-flex flex-row">
+                            <i class="fa fa-user profile-icon-style" aria-hidden="true"></i>
+                            <div>
+                                <h1 class="profile-name">Joseph Gray</h1>
+                                <p class="profile-views">1.7k views</p>
+                            </div>
+                        </div>
+                        <div class="share-icon-container d-flex flex-row">
+                            <i class="fa fa-share-alt share-icon-style" aria-hidden="true"></i>
+                            <div>
+                                <p class="shate-text-sylye">Share</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account1-container">
+                    <div class="img-container">
+                        <div class="img-arrow-btn-container">
+                            <i class="fa fa-arrow-left arrow-icon" aria-hidden="true"></i>
+                            <button class="join-btn">Leave Group</button>
+                        </div>
+                        <div class="create-account-container">
+                            <div class="account-head-icon-style">
+                                <h1 class="create-acc-head">Create Account</h1>
+                                <div>
+                                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="d-flex mt-4">
+                                    <input type="text" placeholder="First Name" class="firstname-input" />
+                                    <div>
+                                        <input type="text" placeholder="Last Name" class="firstname-input" />
+                                    </div>
+                                </div>
+                                <input type="text" placeholder="Email" class="email-style" />
+                                <div>
+                                    <input type="password" placeholder="Password" class="email-style" />
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <input type="password" placeholder="Confirm Password" class="email-style" />
+                                <div class="mt-4 create-sign-container">
+                                    <button class="create-button">Create Account</button>
+                                    <p class="sign-para">or, Sign In</p>
+                                </div>
+                                <div class="facebook-container">
+                                    <i class="fa fa-facebook-official facebook-icon mr-1" aria-hidden="true"></i>
+                                    <p class="text-center ">Sign Up with Facebook</p>
+                                </div>
+                                <div class="facebook-container">
+                                    <img src="https://s3-symbol-logo.tradingview.com/alphabet--600.png" class="google-img-style" />
+                                    <p class="text-center pt-1">Sign Up with Facebook</p>
+                                </div>
+                                <p class="text-center pt-2">By signing up, you agree to our Terms & conditions, Privacy policy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sign-in-container">
+                    <div class="img-container">
+                        <div class="img-arrow-btn-container">
+                            <i class="fa fa-arrow-left arrow-icon" aria-hidden="true"></i>
+                            <button class="join-btn">Leave Group</button>
+                        </div>
+                        <div class="create-account-container">
+                            <div class="account-head-icon-style">
+                                <h1 class="create-acc-head">Welcome back!</h1>
+                                <div>
+                                    <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <input type="text" placeholder="Email" class="email-style" />
+                                <div>
+                                    <input type="password" placeholder="Password" class="email-style" />
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="mt-4 create-sign-container">
+                                    <button class="create-button">Create Account</button>
+                                    <p class="sign-para">or, Create Account</p>
+                                </div>
+                                <div class="facebook-container mt-4">
+                                    <i class="fa fa-facebook-official facebook-icon mr-1" aria-hidden="true"></i>
+                                    <p class="text-center ">Sign Up with Facebook</p>
+                                </div>
+                                <div class="facebook-container">
+                                    <img src="https://s3-symbol-logo.tradingview.com/alphabet--600.png" class="google-img-style" />
+                                    <p class="text-center pt-1">Sign Up with Facebook</p>
+                                </div>
+                                <p class="text-center pt-2">Forget Password?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
